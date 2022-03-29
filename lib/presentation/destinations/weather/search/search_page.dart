@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_template/foundation/extensions/string_ext.dart';
-import 'package:flutter_template/presentation/base/exceptions/unhandled_effect_exception.dart';
-import 'package:flutter_template/presentation/base/page/base_page.dart';
+import 'package:flutter_template/foundation/extensions/theme_ext.dart';
+import 'package:flutter_template/presentation/base/view_model_provider/view_model_provider.dart';
 import 'package:flutter_template/presentation/base/widgets/list/ui_list.dart';
 import 'package:flutter_template/presentation/base/widgets/responsive/responsive_builder.dart';
-import 'package:flutter_template/presentation/base/widgets/snackbar/snackbar.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/search_screen_intent.dart';
-import 'package:flutter_template/presentation/destinations/weather/search/search_screen_state.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/search_view_model.dart';
-import 'package:flutter_template/presentation/entity/effect/effect.dart';
-import 'package:flutter_template/presentation/entity/screen/screen.dart';
 import 'package:flutter_template/presentation/entity/weather/ui_city.dart';
 import 'package:flutter_template/presentation/intl/translations/translation_keys.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -19,30 +15,24 @@ import 'package:tuple/tuple.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/list/ui_city_renderer.dart';
 
 class SearchPage extends StatelessWidget {
-  final SearchScreen searchScreen;
-
-  const SearchPage({Key? key, required this.searchScreen}) : super(key: key);
+  const SearchPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BasePage<SearchScreen, SearchScreenState, SearchViewModel>(
-      hideDefaultLoading: true,
-      viewModelProvider: searchViewModelProvider,
-      screen: searchScreen,
-      onAppBarBackPressed: (viewModel) => viewModel.onIntent(
-        SearchScreenIntent.back(),
+    return ViewModelProvider(
+      provider: searchViewModelProvider,
+      child: Container(
+        color: context.theme.primaryColorDark,
+        child: SafeArea(
+          child: Scaffold(
+            backgroundColor: context.theme.backgroundColor,
+            appBar: AppBar(
+              title: const Text("Flutter Testing"),
+            ),
+            body: const _SearchPageBody(),
+          ),
+        ),
       ),
-      body: const _SearchPageBody(),
-      onEffect: _handleEffect,
-    );
-  }
-
-  _handleEffect(Effect effect) {
-    effect.maybeMap(
-      snackBar: (snackbarEffect) {
-        showSnackbar(snackbarEffect);
-      },
-      orElse: () => throw UnhandledEffectException(effect),
     );
   }
 }

@@ -1,14 +1,69 @@
-// DO NOT EDIT.
-// This import will be edited when build of ios by scripts/build.sh
-// This file is ignored in git for any further modifications.
-// To add file to git again run 'git update-index --no-skip-worktree lib/main.dart'
-import 'package:flutter_template/entrypoints/main_prod.dart' as entrypoint;
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_template/domain/di/domain_module.dart';
+import 'package:flutter_template/flavors/flavor.dart';
+import 'package:flutter_template/flavors/flavor_config.dart';
+import 'package:flutter_template/flavors/flavor_values.dart';
+import 'package:flutter_template/interactor/di/interactor_module.dart';
+import 'package:flutter_template/presentation/base/theme/template_app_theme_data.dart';
+import 'package:flutter_template/presentation/destinations/weather/search/search_page.dart';
+import 'package:flutter_template/presentation/di/presentation_module.dart';
+import 'package:flutter_template/presentation/intl/translations/translation_loader.dart';
+import 'package:flutter_template/repository/di/repository_module.dart';
+import 'package:flutter_template/services/di/service_module.dart';
+import 'package:get_it/get_it.dart';
 
-/// Running `flutter build ios` has an error currently where
-/// the `generated_main.dart` file does not point to the
-/// correct target (-t) defined in the build command.
-/// It always points to `main.dart` thus this file is used
-/// until a fix is released.
 void main() {
-  entrypoint.main();
+  FlavorConfig.initialize(
+    flavor: Flavor.dev,
+    values: const FlavorValues(
+      apiBaseUrl: "https://www.metaweather.com/",
+      logSqlStatements: true,
+      showLogs: true,
+    ),
+  );
+  startApp();
+}
+
+void startApp() async {
+  await _initialiseApp();
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [Locale("en", "US")],
+      path: "assets/translations",
+      fallbackLocale: const Locale("en", "US"),
+      assetLoader: const CodegenLoader(),
+      child: ProviderScope(
+        child: Builder(builder: (context) {
+          return MaterialApp(
+            theme: lightTheme,
+            darkTheme: darkTheme,
+            themeMode: ThemeMode.dark,
+            home: const SearchPage(),
+            localizationsDelegates: context.localizationDelegates,
+            supportedLocales: context.supportedLocales,
+          );
+        }),
+      ),
+    ),
+  );
+}
+
+Future _initialiseApp() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await _initialiseGetIt();
+
+  await EasyLocalization.ensureInitialized();
+}
+
+Future _initialiseGetIt() async {
+  GetIt.instance
+    ..serviceModule()
+    ..repositoryModule()
+    ..domainModule()
+    ..interactorModule()
+    ..presentationModule();
 }

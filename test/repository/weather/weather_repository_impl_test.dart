@@ -1,7 +1,6 @@
 import 'package:flutter_template/domain/entity/base/datetime/date.dart';
 import 'package:flutter_template/repository/date/date_repository.dart';
 import 'package:flutter_template/repository/weather/domain_city_mapper.dart';
-import 'package:flutter_template/repository/weather/domain_weather_mapper.dart';
 import 'package:flutter_template/repository/weather/local_city_mapper.dart';
 import 'package:flutter_template/repository/weather/local_day_weather_mapper.dart';
 import 'package:flutter_template/repository/weather/local_weather_mapper.dart';
@@ -16,18 +15,15 @@ import '../../exception/test_exceptions.dart';
 import '../../mocks/mocks.dart';
 import '../../test_models/city_models.dart';
 import '../../test_models/local_city_data_models.dart';
-import '../../test_models/local_city_with_weather_models.dart';
 import '../../test_models/local_day_weather_companion.dart';
 import '../../test_models/local_day_weather_models.dart';
 import '../../test_models/local_weather_companion_models.dart';
 import '../../test_models/remote_weather_models.dart';
-import '../../test_models/weather_models.dart';
 
 void main() {
   late WeatherLocalService weatherLocalService;
   late WeatherRemoteService weatherRemoteService;
   late DomainCityMapper domainCityMapper;
-  late DomainWeatherMapper domainWeatherMapper;
   late LocalCityMapper localCityMapper;
   late LocalWeatherMapper localWeatherMapper;
   late LocalDayWeatherMapper localDayWeatherMapper;
@@ -39,7 +35,6 @@ void main() {
     weatherLocalService = MockWeatherLocalService();
     weatherRemoteService = MockWeatherRemoteService();
     domainCityMapper = MockDomainCityMapper();
-    domainWeatherMapper = MockDomainWeatherMapper();
     localCityMapper = MockLocalCityMapper();
     localWeatherMapper = MockLocalWeatherMapper();
     localDayWeatherMapper = MockLocalDayWeatherMapper();
@@ -49,7 +44,6 @@ void main() {
       weatherLocalService: weatherLocalService,
       weatherRemoteService: weatherRemoteService,
       domainCityMapper: domainCityMapper,
-      domainWeatherMapper: domainWeatherMapper,
       localCityMapper: localCityMapper,
       localWeatherMapper: localWeatherMapper,
       localDayWeatherMapper: localDayWeatherMapper,
@@ -119,72 +113,6 @@ void main() {
               verify(() => weatherLocalService.getFavoriteCitiesStream())
                   .called(1);
               verify(() => domainCityMapper.mapList(localCityData)).called(1);
-            },
-            count: 1,
-          ),
-        );
-  });
-
-  test(
-      "Given local service returns list of LocalCityWithWeather, When getFavoriteCitiesWeatherList is called, then Future<List<Weather>> is returned",
-      () async {
-    // Given
-    final localCityWithWeather = localCityWithWeatherList;
-    final weatherData = weatherList;
-    when(() => weatherLocalService.getFavoriteCitiesWeatherList())
-        .thenAnswer((invocation) => Future.value(localCityWithWeather));
-    when(() => domainWeatherMapper.mapList(localCityWithWeather))
-        .thenReturn(weatherData);
-
-    // When
-    final result = await weatherRepository.getFavoriteCitiesWeatherList();
-
-    // Then
-    verify(() => weatherLocalService.getFavoriteCitiesWeatherList()).called(1);
-    verify(() => domainWeatherMapper.mapList(localCityWithWeather)).called(1);
-    expect(result, same(weatherData));
-  });
-
-  test(
-      "Given local service throws exception, When getFavoriteCitiesWeatherList is called, then same exception is thrown",
-      () async {
-    // Given
-    final testException = TestException();
-    when(() => weatherLocalService.getFavoriteCitiesWeatherList())
-        .thenThrow(testException);
-
-    // When
-    expect(
-      () async => await weatherRepository.getFavoriteCitiesWeatherList(),
-      throwsA(same(testException)),
-    );
-
-    // Then
-    verify(() => weatherLocalService.getFavoriteCitiesWeatherList()).called(1);
-    verifyZeroInteractions(domainWeatherMapper);
-  });
-
-  test(
-      "Given local service returns Stream<List<LocalCityWithWeather>>, When getFavoriteCitiesWeatherStream is called, Then Stream<List<Weather>> is returned",
-      () {
-    // Given
-    final localCityWithWeather = localCityWithWeatherList;
-    final weatherData = weatherList;
-    when(() => weatherLocalService.getFavoriteCitiesWeatherStream())
-        .thenAnswer((invocation) => Stream.value(localCityWithWeather));
-    when(() => domainWeatherMapper.mapList(localCityWithWeather))
-        .thenReturn(weatherData);
-
-    // When
-    weatherRepository.getFavoriteCitiesWeatherStream().listen(
-          expectAsync1(
-            (data) {
-              // Then
-              expect(data, same(weatherData));
-              verify(() => weatherLocalService.getFavoriteCitiesWeatherStream())
-                  .called(1);
-              verify(() => domainWeatherMapper.mapList(localCityWithWeather))
-                  .called(1);
             },
             count: 1,
           ),

@@ -1,7 +1,6 @@
 import 'package:flutter_template/foundation/extensions/string_ext.dart';
 import 'package:flutter_template/interactor/weather/favorite/favorite_weather_interactor.dart';
 import 'package:flutter_template/interactor/weather/search/search_city_interactor.dart';
-import 'package:flutter_template/navigation/weather/search/search_navigator.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/search_screen_intent.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/search_screen_state.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/search_view_model.dart';
@@ -12,7 +11,6 @@ import 'package:flutter_template/presentation/intl/translations/translation_keys
 import 'package:rxdart/rxdart.dart';
 
 class SearchViewModelImpl extends SearchViewModel {
-  final SearchNavigator searchNavigator;
   final SearchCityInteractor searchCityInteractor;
   final FavoriteWeatherInteractor favoriteWeatherInteractor;
   final _searchTermSubject = BehaviorSubject.seeded("");
@@ -22,7 +20,6 @@ class SearchViewModelImpl extends SearchViewModel {
       _searchTermSubject.hasValue ? _searchTermSubject.value : "";
 
   SearchViewModelImpl({
-    required this.searchNavigator,
     required this.searchCityInteractor,
     required this.favoriteWeatherInteractor,
   }) : super(_initialState);
@@ -61,7 +58,6 @@ class SearchViewModelImpl extends SearchViewModel {
   @override
   void onIntent(SearchScreenIntent intent) {
     intent.when(
-      back: () => searchNavigator.back(),
       search: (newSearchTerm) {
         if (newSearchTerm != searchTerm) {
           _searchTermSubject.add(newSearchTerm);

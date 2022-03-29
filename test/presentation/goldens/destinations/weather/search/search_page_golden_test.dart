@@ -45,7 +45,7 @@ void main() {
 
   _loadPageForGolden(WidgetTester tester) async {
     await tester.loadPageForGolden(
-      page: const SearchPage(searchScreen: SearchScreen()),
+      page: const SearchPage(),
       viewModelProvider: searchViewModelProvider,
       fakeViewModelProvider: _fakeSearchViewModelProvider,
     );

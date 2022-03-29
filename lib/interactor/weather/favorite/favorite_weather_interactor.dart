@@ -7,9 +7,5 @@ abstract class FavoriteWeatherInteractor {
 
   Future<UIResult<void>> removeCityFavorite(UICity uiCity);
 
-  Stream<List<UIListItem>> getFavoriteWeatherUIList();
-
   Stream<List<UICity>> getFavoriteCitiesStream();
-
-  Future<UIResult<void>> fetchFavouriteCitiesWeather();
 }

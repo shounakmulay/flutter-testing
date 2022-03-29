@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter_template/foundation/extensions/string_ext.dart';
 import 'package:flutter_template/interactor/weather/favorite/favorite_weather_interactor.dart';
 import 'package:flutter_template/interactor/weather/search/search_city_interactor.dart';
-import 'package:flutter_template/navigation/weather/search/search_navigator.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/search_screen_intent.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/search_screen_state.dart';
 import 'package:flutter_template/presentation/destinations/weather/search/search_view_model.dart';
@@ -21,7 +20,6 @@ import '../../../../base/test_helpers.dart';
 import '../../../../../test_models/ui_city_models.dart';
 
 void main() {
-  late SearchNavigator searchNavigator;
   late SearchCityInteractor searchCityInteractor;
   late FavoriteWeatherInteractor favoriteWeatherInteractor;
   late SearchViewModel viewModel;
@@ -29,7 +27,6 @@ void main() {
   setUpAll(baseSetupAll);
 
   setUp(() {
-    searchNavigator = MockSearchNavigator();
     searchCityInteractor = MockSearchCityInteractor();
     favoriteWeatherInteractor = MockFavoriteWeatherInteractor();
   });
@@ -40,7 +37,6 @@ void main() {
 
   _createViewModel() {
     viewModel = SearchViewModelImpl(
-      searchNavigator: searchNavigator,
       searchCityInteractor: searchCityInteractor,
       favoriteWeatherInteractor: favoriteWeatherInteractor,
     );
@@ -141,21 +137,6 @@ void main() {
     await Future.delayed(const Duration(milliseconds: 500));
     // Verify only 1 call was made with the latest values after debounce
     verify(() => searchCityInteractor.search(searchTerm4)).called(1);
-  });
-
-  test(
-      "Given search page is open, When back intent is fired, Then back should be called on search navigator",
-      () {
-    // Given
-    when(() => searchCityInteractor.searchResultsStream)
-        .thenReturnEmptyListStream();
-    _createViewModel();
-
-    // When
-    viewModel.onIntent(SearchScreenIntent.back());
-
-    // Then
-    verify(() => searchNavigator.back()).called(1);
   });
 
   test(

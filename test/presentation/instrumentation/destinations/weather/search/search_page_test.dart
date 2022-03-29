@@ -44,7 +44,7 @@ void main() {
 
   _loadPage(WidgetTester tester) async {
     await tester.loadPage(
-      widget: const SearchPage(searchScreen: SearchScreen()),
+      widget: const SearchPage(),
       viewModelProvider: searchViewModelProvider,
       fakeViewModelProvider: _fakeSearchViewModelProvider,
     );
@@ -192,22 +192,6 @@ void main() {
     // Then
     verify(() => fakeSearchViewModel
         .onIntent(SearchScreenIntent.search(searchTerm: "search"))).called(1);
-  });
-
-  testWidgets(
-      "Given search page is opened, When back button is pressed, Then back intent is fired",
-      (tester) async {
-    // Given
-    await _loadPage(tester);
-
-    // When
-
-    await tester.tap(find.byTooltip("Back"));
-    await tester.pump();
-
-    // Then
-    verify(() => fakeSearchViewModel.onIntent(SearchScreenIntent.back()))
-        .called(1);
   });
 
   testWidgets(
