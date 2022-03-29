@@ -1,4 +1,4 @@
-import 'package:flutter_template/domain/entity/weather/city.dart';
+import 'package:flutter_testing/domain/entity/weather/city.dart';
 
 final singleCityList = [
   city1,

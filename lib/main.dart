@@ -1,17 +1,17 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_template/domain/di/domain_module.dart';
-import 'package:flutter_template/flavors/flavor.dart';
-import 'package:flutter_template/flavors/flavor_config.dart';
-import 'package:flutter_template/flavors/flavor_values.dart';
-import 'package:flutter_template/interactor/di/interactor_module.dart';
-import 'package:flutter_template/presentation/base/theme/template_app_theme_data.dart';
-import 'package:flutter_template/presentation/destinations/weather/search/search_page.dart';
-import 'package:flutter_template/presentation/di/presentation_module.dart';
-import 'package:flutter_template/presentation/intl/translations/translation_loader.dart';
-import 'package:flutter_template/repository/di/repository_module.dart';
-import 'package:flutter_template/services/di/service_module.dart';
+import 'package:flutter_testing/domain/di/domain_module.dart';
+import 'package:flutter_testing/flavors/flavor.dart';
+import 'package:flutter_testing/flavors/flavor_config.dart';
+import 'package:flutter_testing/flavors/flavor_values.dart';
+import 'package:flutter_testing/interactor/di/interactor_module.dart';
+import 'package:flutter_testing/presentation/base/theme/template_app_theme_data.dart';
+import 'package:flutter_testing/presentation/destinations/weather/search/search_page.dart';
+import 'package:flutter_testing/presentation/di/presentation_module.dart';
+import 'package:flutter_testing/presentation/intl/translations/translation_loader.dart';
+import 'package:flutter_testing/repository/di/repository_module.dart';
+import 'package:flutter_testing/services/di/service_module.dart';
 import 'package:get_it/get_it.dart';
 
 void main() {

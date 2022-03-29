@@ -1,14 +1,14 @@
-import 'package:flutter_template/repository/date/date_mapper.dart';
-import 'package:flutter_template/repository/date/date_repository.dart';
-import 'package:flutter_template/repository/date/date_repository_impl.dart';
-import 'package:flutter_template/repository/date/date_time_mapper.dart';
-import 'package:flutter_template/repository/date/time_mapper.dart';
-import 'package:flutter_template/repository/weather/domain_city_mapper.dart';
-import 'package:flutter_template/repository/weather/local_city_mapper.dart';
-import 'package:flutter_template/repository/weather/local_day_weather_mapper.dart';
-import 'package:flutter_template/repository/weather/local_weather_mapper.dart';
-import 'package:flutter_template/repository/weather/weather_repository.dart';
-import 'package:flutter_template/repository/weather/weather_repository_impl.dart';
+import 'package:flutter_testing/repository/date/date_mapper.dart';
+import 'package:flutter_testing/repository/date/date_repository.dart';
+import 'package:flutter_testing/repository/date/date_repository_impl.dart';
+import 'package:flutter_testing/repository/date/date_time_mapper.dart';
+import 'package:flutter_testing/repository/date/time_mapper.dart';
+import 'package:flutter_testing/repository/weather/domain_city_mapper.dart';
+import 'package:flutter_testing/repository/weather/local_city_mapper.dart';
+import 'package:flutter_testing/repository/weather/local_day_weather_mapper.dart';
+import 'package:flutter_testing/repository/weather/local_weather_mapper.dart';
+import 'package:flutter_testing/repository/weather/weather_repository.dart';
+import 'package:flutter_testing/repository/weather/weather_repository_impl.dart';
 import 'package:get_it/get_it.dart';
 
 extension RepositoryModule on GetIt {

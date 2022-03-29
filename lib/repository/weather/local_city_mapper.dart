@@ -1,7 +1,7 @@
 import 'package:drift/drift.dart';
-import 'package:flutter_template/domain/entity/weather/city.dart';
-import 'package:flutter_template/foundation/mapper/mapper.dart';
-import 'package:flutter_template/services/base/database/app_database.dart';
+import 'package:flutter_testing/domain/entity/weather/city.dart';
+import 'package:flutter_testing/foundation/mapper/mapper.dart';
+import 'package:flutter_testing/services/base/database/app_database.dart';
 
 abstract class LocalCityMapper extends Mapper<City, LocalCityCompanion> {}
 

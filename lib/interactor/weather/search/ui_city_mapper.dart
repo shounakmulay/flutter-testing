@@ -1,6 +1,6 @@
-import 'package:flutter_template/domain/entity/weather/city.dart';
-import 'package:flutter_template/foundation/mapper/mapper2.dart';
-import 'package:flutter_template/presentation/entity/weather/ui_city.dart';
+import 'package:flutter_testing/domain/entity/weather/city.dart';
+import 'package:flutter_testing/foundation/mapper/mapper2.dart';
+import 'package:flutter_testing/presentation/entity/weather/ui_city.dart';
 
 abstract class UICityMapper extends Mapper2<City, bool, UICity> {
   City mapCity(UICity from);

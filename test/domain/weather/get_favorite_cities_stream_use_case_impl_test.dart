@@ -1,7 +1,7 @@
-import 'package:flutter_template/domain/weather/get_favorite_cities_stream_use_case.dart';
-import 'package:flutter_template/domain/weather/get_favorite_cities_stream_use_case_impl.dart';
-import 'package:flutter_template/foundation/unit.dart';
-import 'package:flutter_template/repository/weather/weather_repository.dart';
+import 'package:flutter_testing/domain/weather/get_favorite_cities_stream_use_case.dart';
+import 'package:flutter_testing/domain/weather/get_favorite_cities_stream_use_case_impl.dart';
+import 'package:flutter_testing/foundation/unit.dart';
+import 'package:flutter_testing/repository/weather/weather_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

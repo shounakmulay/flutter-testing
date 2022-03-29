@@ -1,11 +1,11 @@
-import 'package:flutter_template/domain/entity/base/datetime/date.dart';
-import 'package:flutter_template/domain/entity/base/datetime/date_time.dart';
-import 'package:flutter_template/domain/entity/base/datetime/time.dart';
-import 'package:flutter_template/foundation/global_type_alias.dart';
-import 'package:flutter_template/repository/date/date_mapper.dart';
-import 'package:flutter_template/repository/date/date_repository.dart';
-import 'package:flutter_template/repository/date/date_time_mapper.dart';
-import 'package:flutter_template/repository/date/time_mapper.dart';
+import 'package:flutter_testing/domain/entity/base/datetime/date.dart';
+import 'package:flutter_testing/domain/entity/base/datetime/date_time.dart';
+import 'package:flutter_testing/domain/entity/base/datetime/time.dart';
+import 'package:flutter_testing/foundation/global_type_alias.dart';
+import 'package:flutter_testing/repository/date/date_mapper.dart';
+import 'package:flutter_testing/repository/date/date_repository.dart';
+import 'package:flutter_testing/repository/date/date_time_mapper.dart';
+import 'package:flutter_testing/repository/date/time_mapper.dart';
 import 'package:intl/intl.dart';
 
 class DateRepositoryImpl implements DateRepository {

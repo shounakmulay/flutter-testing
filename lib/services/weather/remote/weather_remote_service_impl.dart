@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/services/entity/weather/remote/remote_city.dart';
-import 'package:flutter_template/services/entity/weather/remote/remote_weather.dart';
-import 'package:flutter_template/services/weather/remote/weather_remote_service.dart';
+import 'package:flutter_testing/services/entity/weather/remote/remote_city.dart';
+import 'package:flutter_testing/services/entity/weather/remote/remote_weather.dart';
+import 'package:flutter_testing/services/weather/remote/weather_remote_service.dart';
 
 class WeatherRemoteServiceImpl implements WeatherRemoteService {
   final Dio dio;

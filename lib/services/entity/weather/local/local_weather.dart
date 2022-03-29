@@ -1,5 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:flutter_template/services/base/database/helpers/foreign_key_helper.dart';
+import 'package:flutter_testing/services/base/database/helpers/foreign_key_helper.dart';
 
 class LocalWeather extends Table {
   IntColumn get cityWoeid => integer().foreignKey(

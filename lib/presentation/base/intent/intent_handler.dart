@@ -1,4 +1,4 @@
-import 'package:flutter_template/presentation/entity/intent/intent.dart';
+import 'package:flutter_testing/presentation/entity/intent/intent.dart';
 
 abstract class IntentHandler<T extends BaseIntent> {
   void onIntent(T intent);

@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:drift/drift.dart';
-import 'package:flutter_template/services/base/database/app_database.dart';
-import 'package:flutter_template/services/entity/weather/local/local_city.dart';
-import 'package:flutter_template/services/entity/weather/local/local_city_with_weather.dart';
-import 'package:flutter_template/services/entity/weather/local/local_day_weather.dart';
-import 'package:flutter_template/services/entity/weather/local/local_weather.dart';
-import 'package:flutter_template/services/weather/local/weather_local_service.dart';
+import 'package:flutter_testing/services/base/database/app_database.dart';
+import 'package:flutter_testing/services/entity/weather/local/local_city.dart';
+import 'package:flutter_testing/services/entity/weather/local/local_city_with_weather.dart';
+import 'package:flutter_testing/services/entity/weather/local/local_day_weather.dart';
+import 'package:flutter_testing/services/entity/weather/local/local_weather.dart';
+import 'package:flutter_testing/services/weather/local/weather_local_service.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'weather_local_service_impl.g.dart';

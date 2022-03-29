@@ -1,13 +1,13 @@
-import 'package:flutter_template/domain/entity/weather/city.dart';
-import 'package:flutter_template/repository/date/date_repository.dart';
-import 'package:flutter_template/repository/weather/domain_city_mapper.dart';
-import 'package:flutter_template/repository/weather/local_day_weather_mapper.dart';
-import 'package:flutter_template/repository/weather/local_weather_mapper.dart';
-import 'package:flutter_template/repository/weather/weather_repository.dart';
-import 'package:flutter_template/services/base/database/app_database.dart';
-import 'package:flutter_template/services/weather/local/weather_local_service.dart';
-import 'package:flutter_template/services/weather/remote/weather_remote_service.dart';
-import 'package:flutter_template/repository/weather/local_city_mapper.dart';
+import 'package:flutter_testing/domain/entity/weather/city.dart';
+import 'package:flutter_testing/repository/date/date_repository.dart';
+import 'package:flutter_testing/repository/weather/domain_city_mapper.dart';
+import 'package:flutter_testing/repository/weather/local_day_weather_mapper.dart';
+import 'package:flutter_testing/repository/weather/local_weather_mapper.dart';
+import 'package:flutter_testing/repository/weather/weather_repository.dart';
+import 'package:flutter_testing/services/base/database/app_database.dart';
+import 'package:flutter_testing/services/weather/local/weather_local_service.dart';
+import 'package:flutter_testing/services/weather/remote/weather_remote_service.dart';
+import 'package:flutter_testing/repository/weather/local_city_mapper.dart';
 
 class WeatherRepositoryImpl implements WeatherRepository {
   final WeatherLocalService weatherLocalService;

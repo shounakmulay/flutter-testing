@@ -1,4 +1,4 @@
-import 'package:flutter_template/foundation/global_type_alias.dart';
+import 'package:flutter_testing/foundation/global_type_alias.dart';
 
 class JsonDateTimeConverter {
   static DartDateTime fromJson(String date) {

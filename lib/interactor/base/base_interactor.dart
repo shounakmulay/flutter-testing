@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/domain/entity/base/result/result.dart';
-import 'package:flutter_template/presentation/entity/base/ui_result.dart';
+import 'package:flutter_testing/domain/entity/base/result/result.dart';
+import 'package:flutter_testing/presentation/entity/base/ui_result.dart';
 
 abstract class BaseInteractor {
   @protected

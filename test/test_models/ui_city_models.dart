@@ -1,4 +1,4 @@
-import 'package:flutter_template/presentation/entity/weather/ui_city.dart';
+import 'package:flutter_testing/presentation/entity/weather/ui_city.dart';
 
 final uiCity = UICity(
   cityId: 1,

@@ -1,4 +1,4 @@
-import 'package:flutter_template/foundation/logger/logger.dart';
+import 'package:flutter_testing/foundation/logger/logger.dart';
 
 abstract class BaseStreamUseCase<IN, OUT> {
   Stream<OUT> callInternal(IN param);

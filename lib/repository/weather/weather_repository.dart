@@ -1,4 +1,4 @@
-import 'package:flutter_template/domain/entity/weather/city.dart';
+import 'package:flutter_testing/domain/entity/weather/city.dart';
 
 abstract class WeatherRepository {
   Future<List<City>> searchCities(String searchTerm);

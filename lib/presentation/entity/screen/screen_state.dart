@@ -1,4 +1,4 @@
-import 'package:flutter_template/presentation/entity/base/ui_toolbar.dart';
+import 'package:flutter_testing/presentation/entity/base/ui_toolbar.dart';
 
 abstract class ScreenState {
   UIToolbar get toolbar;

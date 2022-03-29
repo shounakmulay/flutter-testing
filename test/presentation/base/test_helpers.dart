@@ -1,6 +1,6 @@
-import 'package:flutter_template/flavors/flavor.dart';
-import 'package:flutter_template/flavors/flavor_config.dart';
-import 'package:flutter_template/flavors/flavor_values.dart';
+import 'package:flutter_testing/flavors/flavor.dart';
+import 'package:flutter_testing/flavors/flavor_config.dart';
+import 'package:flutter_testing/flavors/flavor_values.dart';
 
 void baseSetupAll() {
   FlavorConfig.initialize(

@@ -1,4 +1,4 @@
-import 'package:flutter_template/presentation/entity/base/ui_list_item.dart';
+import 'package:flutter_testing/presentation/entity/base/ui_list_item.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'ui_city.freezed.dart';

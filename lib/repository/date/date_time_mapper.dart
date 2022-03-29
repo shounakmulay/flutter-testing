@@ -1,6 +1,6 @@
-import 'package:flutter_template/domain/entity/base/datetime/date_time.dart';
-import 'package:flutter_template/foundation/global_type_alias.dart';
-import 'package:flutter_template/foundation/mapper/mapper.dart';
+import 'package:flutter_testing/domain/entity/base/datetime/date_time.dart';
+import 'package:flutter_testing/foundation/global_type_alias.dart';
+import 'package:flutter_testing/foundation/mapper/mapper.dart';
 
 abstract class DateTimeMapper extends Mapper<DartDateTime, DateTime> {}
 

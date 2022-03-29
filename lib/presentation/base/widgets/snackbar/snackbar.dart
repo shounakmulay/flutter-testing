@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/presentation/entity/effect/effect.dart';
+import 'package:flutter_testing/presentation/entity/effect/effect.dart';
 
 GlobalKey<ScaffoldMessengerState> scaffoldMessengerKey =
     GlobalKey<ScaffoldMessengerState>();

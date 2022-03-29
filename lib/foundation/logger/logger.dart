@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_template/flavors/flavor_config.dart';
+import 'package:flutter_testing/flavors/flavor_config.dart';
 import 'package:logger/logger.dart';
 import 'package:easy_logger/easy_logger.dart';
 

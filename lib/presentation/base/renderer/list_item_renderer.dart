@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_template/presentation/entity/base/ui_list_item.dart';
-import 'package:flutter_template/presentation/entity/intent/intent.dart';
+import 'package:flutter_testing/presentation/entity/base/ui_list_item.dart';
+import 'package:flutter_testing/presentation/entity/intent/intent.dart';
 
 abstract class ListItemRenderer<T extends UIListItem, I extends BaseIntent> {
   const ListItemRenderer();

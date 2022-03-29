@@ -1,4 +1,4 @@
-import 'package:flutter_template/services/entity/weather/remote/remote_city.dart';
+import 'package:flutter_testing/services/entity/weather/remote/remote_city.dart';
 
 const allRemoteCityList = [
   remoteCity1,

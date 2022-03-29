@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_template/foundation/logger/logger.dart';
-import 'package:flutter_template/presentation/entity/effect/effect.dart';
-import 'package:flutter_template/presentation/entity/screen/screen.dart';
-import 'package:flutter_template/presentation/entity/screen/screen_state.dart';
+import 'package:flutter_testing/foundation/logger/logger.dart';
+import 'package:flutter_testing/presentation/entity/effect/effect.dart';
+import 'package:flutter_testing/presentation/entity/screen/screen.dart';
+import 'package:flutter_testing/presentation/entity/screen/screen_state.dart';
 import 'package:rxdart/rxdart.dart';
 
 abstract class BaseViewModel<SCREEN extends Screen,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_template/presentation/base/view_model_provider/base_view_model.dart';
-import 'package:flutter_template/presentation/base/view_model_provider/view_model_provider.dart';
-import 'package:flutter_template/presentation/entity/screen/screen.dart';
-import 'package:flutter_template/presentation/entity/screen/screen_state.dart';
+import 'package:flutter_testing/presentation/base/view_model_provider/base_view_model.dart';
+import 'package:flutter_testing/presentation/base/view_model_provider/view_model_provider.dart';
+import 'package:flutter_testing/presentation/entity/screen/screen.dart';
+import 'package:flutter_testing/presentation/entity/screen/screen_state.dart';
 
 extension ViewModelProviderExt on BuildContext {
   AutoDisposeStateNotifierProvider<VIEW_MODEL, SCREEN_STATE> viewModelProvider<

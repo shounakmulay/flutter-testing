@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/presentation/base/widgets/responsive/responsive_builder.dart';
-import 'package:flutter_template/presentation/entity/base/responsive/responsive_breakpoints.dart';
-import 'package:flutter_template/presentation/entity/base/responsive/screen_type.dart';
+import 'package:flutter_testing/presentation/base/widgets/responsive/responsive_builder.dart';
+import 'package:flutter_testing/presentation/entity/base/responsive/responsive_breakpoints.dart';
+import 'package:flutter_testing/presentation/entity/base/responsive/screen_type.dart';
 
 class ResponsiveScreenTypeBuilder extends StatelessWidget {
   final ResponsiveBreakpoints breakpoints;

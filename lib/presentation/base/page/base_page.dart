@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_template/foundation/extensions/theme_ext.dart';
-import 'package:flutter_template/presentation/base/view_model_provider/base_view_model.dart';
-import 'package:flutter_template/presentation/base/view_model_provider/view_model_provider.dart';
-import 'package:flutter_template/presentation/base/view_model_provider/view_model_provider_ext.dart';
-import 'package:flutter_template/presentation/base/widgets/appbar/app_bar_back_button.dart';
-import 'package:flutter_template/presentation/base/widgets/appbar/app_bar_title.dart';
-import 'package:flutter_template/presentation/base/widgets/scaffold/scaffold_body_with_loading_indicator.dart';
-import 'package:flutter_template/presentation/entity/effect/effect.dart';
-import 'package:flutter_template/presentation/entity/screen/screen.dart';
-import 'package:flutter_template/presentation/entity/screen/screen_state.dart';
+import 'package:flutter_testing/foundation/extensions/theme_ext.dart';
+import 'package:flutter_testing/presentation/base/view_model_provider/base_view_model.dart';
+import 'package:flutter_testing/presentation/base/view_model_provider/view_model_provider.dart';
+import 'package:flutter_testing/presentation/base/view_model_provider/view_model_provider_ext.dart';
+import 'package:flutter_testing/presentation/base/widgets/appbar/app_bar_back_button.dart';
+import 'package:flutter_testing/presentation/base/widgets/appbar/app_bar_title.dart';
+import 'package:flutter_testing/presentation/base/widgets/scaffold/scaffold_body_with_loading_indicator.dart';
+import 'package:flutter_testing/presentation/entity/effect/effect.dart';
+import 'package:flutter_testing/presentation/entity/screen/screen.dart';
+import 'package:flutter_testing/presentation/entity/screen/screen_state.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class BasePage<SCREEN extends Screen, SCREEN_STATE extends ScreenState,

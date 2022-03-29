@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/presentation/intl/translations/translation_loader.dart';
+import 'package:flutter_testing/presentation/intl/translations/translation_loader.dart';
 
 typedef Translations = CodegenLoader;
 

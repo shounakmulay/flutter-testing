@@ -1,6 +1,6 @@
-import 'package:flutter_template/domain/datetime/format_date_use_case.dart';
-import 'package:flutter_template/domain/entity/base/datetime/date.dart';
-import 'package:flutter_template/repository/date/date_repository.dart';
+import 'package:flutter_testing/domain/datetime/format_date_use_case.dart';
+import 'package:flutter_testing/domain/entity/base/datetime/date.dart';
+import 'package:flutter_testing/repository/date/date_repository.dart';
 import 'package:tuple/tuple.dart';
 
 class FormatDateUseCaseImpl extends FormatDateUseCase {

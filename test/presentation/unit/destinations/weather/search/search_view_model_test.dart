@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import 'package:flutter_template/foundation/extensions/string_ext.dart';
-import 'package:flutter_template/interactor/weather/favorite/favorite_weather_interactor.dart';
-import 'package:flutter_template/interactor/weather/search/search_city_interactor.dart';
-import 'package:flutter_template/presentation/destinations/weather/search/search_screen_intent.dart';
-import 'package:flutter_template/presentation/destinations/weather/search/search_screen_state.dart';
-import 'package:flutter_template/presentation/destinations/weather/search/search_view_model.dart';
-import 'package:flutter_template/presentation/destinations/weather/search/search_view_model_impl.dart';
-import 'package:flutter_template/presentation/entity/base/ui_result.dart';
-import 'package:flutter_template/presentation/entity/base/ui_toolbar.dart';
-import 'package:flutter_template/presentation/intl/translations/translation_keys.dart';
+import 'package:flutter_testing/foundation/extensions/string_ext.dart';
+import 'package:flutter_testing/interactor/weather/favorite/favorite_weather_interactor.dart';
+import 'package:flutter_testing/interactor/weather/search/search_city_interactor.dart';
+import 'package:flutter_testing/presentation/destinations/weather/search/search_screen_intent.dart';
+import 'package:flutter_testing/presentation/destinations/weather/search/search_screen_state.dart';
+import 'package:flutter_testing/presentation/destinations/weather/search/search_view_model.dart';
+import 'package:flutter_testing/presentation/destinations/weather/search/search_view_model_impl.dart';
+import 'package:flutter_testing/presentation/entity/base/ui_result.dart';
+import 'package:flutter_testing/presentation/entity/base/ui_toolbar.dart';
+import 'package:flutter_testing/presentation/intl/translations/translation_keys.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

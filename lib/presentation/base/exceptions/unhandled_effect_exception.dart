@@ -1,4 +1,4 @@
-import 'package:flutter_template/presentation/entity/effect/effect.dart';
+import 'package:flutter_testing/presentation/entity/effect/effect.dart';
 
 class UnhandledEffectException implements Exception {
   final Effect effect;

@@ -1,13 +1,13 @@
-import 'package:flutter_template/interactor/weather/favorite/favorite_weather_interactor.dart';
-import 'package:flutter_template/interactor/weather/search/search_city_interactor.dart';
-import 'package:flutter_template/repository/date/date_repository.dart';
-import 'package:flutter_template/repository/weather/domain_city_mapper.dart';
-import 'package:flutter_template/repository/weather/local_city_mapper.dart';
-import 'package:flutter_template/repository/weather/local_day_weather_mapper.dart';
-import 'package:flutter_template/repository/weather/local_weather_mapper.dart';
-import 'package:flutter_template/repository/weather/weather_repository.dart';
-import 'package:flutter_template/services/weather/local/weather_local_service.dart';
-import 'package:flutter_template/services/weather/remote/weather_remote_service.dart';
+import 'package:flutter_testing/interactor/weather/favorite/favorite_weather_interactor.dart';
+import 'package:flutter_testing/interactor/weather/search/search_city_interactor.dart';
+import 'package:flutter_testing/repository/date/date_repository.dart';
+import 'package:flutter_testing/repository/weather/domain_city_mapper.dart';
+import 'package:flutter_testing/repository/weather/local_city_mapper.dart';
+import 'package:flutter_testing/repository/weather/local_day_weather_mapper.dart';
+import 'package:flutter_testing/repository/weather/local_weather_mapper.dart';
+import 'package:flutter_testing/repository/weather/weather_repository.dart';
+import 'package:flutter_testing/services/weather/local/weather_local_service.dart';
+import 'package:flutter_testing/services/weather/remote/weather_remote_service.dart';
 import 'package:mocktail/mocktail.dart';
 
 // Service

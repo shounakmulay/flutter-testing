@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/flavors/flavor_config.dart';
+import 'package:flutter_testing/flavors/flavor_config.dart';
 
 Dio provideDio() {
   final baseOption = BaseOptions(

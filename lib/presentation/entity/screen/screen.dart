@@ -1,4 +1,4 @@
-import 'package:flutter_template/presentation/entity/routes/routes.dart';
+import 'package:flutter_testing/presentation/entity/routes/routes.dart';
 
 abstract class Screen {
   const Screen._();

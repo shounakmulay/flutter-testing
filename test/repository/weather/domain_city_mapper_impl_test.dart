@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
-import 'package:flutter_template/domain/entity/weather/city.dart';
-import 'package:flutter_template/repository/weather/domain_city_mapper.dart';
+import 'package:flutter_testing/domain/entity/weather/city.dart';
+import 'package:flutter_testing/repository/weather/domain_city_mapper.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
