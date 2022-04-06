@@ -1,3 +1,5 @@
+import 'package:flutter_testing/presentation/base/intent/intent_handler.dart';
+import 'package:flutter_testing/presentation/entity/intent/intent.dart';
 import 'package:flutter_testing/repository/date/date_repository.dart';
 import 'package:flutter_testing/repository/weather/domain_city_mapper.dart';
 import 'package:flutter_testing/repository/weather/local_city_mapper.dart';
@@ -23,3 +25,7 @@ class MockLocalDayWeatherMapper extends Mock implements LocalDayWeatherMapper {}
 
 // Repositories
 class MockDateRepository extends Mock implements DateRepository {}
+
+// Intent Handler
+class MockIntentHandler<T extends BaseIntent> extends Mock
+    implements IntentHandler<T> {}
