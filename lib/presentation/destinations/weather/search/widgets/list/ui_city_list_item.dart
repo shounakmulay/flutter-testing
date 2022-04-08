@@ -21,7 +21,6 @@ class UICityListItem extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded(child: Text(city.title)),
           IconButton(
             icon: Icon(
               city.isFavourite ? Icons.favorite : Icons.favorite_outline,
@@ -31,6 +30,7 @@ class UICityListItem extends StatelessWidget {
               sink.add(SearchScreenIntent.toggleFavorite(city: city));
             },
           ),
+          Expanded(child: Text(city.title)),
         ],
       ),
     );
