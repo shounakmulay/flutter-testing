@@ -34,7 +34,6 @@ void main() {
   setUp(() {});
 
   tearDown(() {
-    GetIt.instance.reset();
     resetMocktailState();
   });
 
